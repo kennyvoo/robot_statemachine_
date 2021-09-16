@@ -83,15 +83,6 @@ class Algorithm:
         return True
 
 
-class Vision:
-    def __init__(self) -> None:
-        self.result = "e"
-        pass
-
-    def detect(self):
-        return True
-
-
 class RobotMDP28:
     def __init__(self) -> None:
         self.tasks_list = []
@@ -156,8 +147,7 @@ class RobotMDP28:
         # return to starting point
         task = Task()
         task.now_ = "path_planning"
-        task.destination = 0
-        task.destination = 0
+        task.destination = [0, 0]
         self.tasks_list.append(task)
 
     def run(self):
